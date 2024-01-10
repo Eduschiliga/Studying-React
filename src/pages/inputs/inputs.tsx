@@ -1,5 +1,6 @@
 import Topo from "@/components/Topo"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Globais from "@/components/Globais";
 
 export default function Inputs() {
     const cursos = ["Administrador", "Usuário", "Membro"]
@@ -8,10 +9,14 @@ export default function Inputs() {
     const [senha, setSenha] = useState<string>("");
     const [user, setUser] = useState<string>("");
 
+    useEffect(() => {
+        Globais.curso = "React.js";
+    })
+
     function selecionarUser() {
         return cursos.map((c: string) => {
             return (
-                <option value={c}>{c}</option>
+                <option value={c} key={Math.random() * 999999999999}>{c}</option>
             );
         })
     }
@@ -45,6 +50,12 @@ export default function Inputs() {
                     <div>Nome: {nome}</div>
                     <div>Senha: {senha}</div>
                     <div>Tipo de usuário: {user}</div>
+                </div>
+
+                <div>
+                    <p>{Globais.aluno}</p>
+                    <p>{Globais.curso}</p>
+                    <p>{Globais.ano}</p>
                 </div>
             </div>
         </>

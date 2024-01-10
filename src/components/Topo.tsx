@@ -20,7 +20,7 @@ export default function Topo() {
         <Link
           href={
             {
-              pathname: "/cursos/cursos",
+              pathname: "/cursos/Cursos",
               query: { nome: "Eduardo", curso: "React Next" },
             }
           }
@@ -30,14 +30,14 @@ export default function Topo() {
         </Link>
 
         <Link
-          href={"/teste/teste"}
+          href={"/teste/Teste"}
           className="bg-white text-blue-600 p-1 rounded font-bold shadow-sm hover:bg-slate-200"
         >
           Teste
         </Link>
 
         <Link
-          href={"/useState/usestate"}
+          href={"/useState/Usestate"}
           className="bg-white text-blue-600 p-1 rounded font-bold shadow-sm hover:bg-slate-200"
         >
           State
@@ -45,7 +45,7 @@ export default function Topo() {
 
 
         <Link
-          href={"/inputs/inputs"}
+          href={"/inputs/Inputs"}
           className="bg-white text-blue-600 p-1 rounded font-bold shadow-sm hover:bg-slate-200"
         >
           Inputs
@@ -56,6 +56,13 @@ export default function Topo() {
           className="bg-white text-blue-600 p-1 rounded font-bold shadow-sm hover:bg-slate-200"
         >
           UseEffect
+        </Link>
+
+        <Link
+          href={"/filtragem/Filtragem"}
+          className="bg-white text-blue-600 p-1 rounded font-bold shadow-sm hover:bg-slate-200"
+        >
+          Filtragem
         </Link>
       </nav>
     </div>

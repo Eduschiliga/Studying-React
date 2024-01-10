@@ -1,5 +1,6 @@
 import Topo from "@/components/Topo";
 import { useEffect, useState } from "react";
+import Globais from "@/components/Globais";
 
 /* Chamado toda vez que a página é renderezida */
 export default function Useeffect() {
@@ -10,10 +11,10 @@ export default function Useeffect() {
         // // variavel não chama renderização de pag
         // ++aux;
         alert("UseEffect disparado!");
-        
-        
-
-    }, [aux]/** renderizando apenas uma vez com o [] */);
+        Globais.aluno = "Luana";
+        Globais.curso = "TypeScript";
+        Globais.ano = "2100";
+    }, []/** renderizando apenas uma vez com o [] */);
 
     function add() {
         let c = cont;
@@ -34,6 +35,12 @@ export default function Useeffect() {
                 <p>{`Valor de aux: ${aux}`}</p>
                 <button onClick={add} className="bg-blue-500 text-white font-bold rounded p-1">Adicionar</button>
             </div>
+            <hr />
+            <div>
+                    <p>{Globais.aluno}</p>
+                    <p>{Globais.curso}</p>
+                    <p>{Globais.ano}</p>
+                </div>
         </div>
     );
 };
